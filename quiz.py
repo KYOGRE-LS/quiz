@@ -1,11 +1,10 @@
 from flask import Flask, render_template, request, jsonify
-from waitress import serve
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("quizlogst.html")
 
 @app.route("/get_response", methods=["POST"])
 def chatbot_response():
